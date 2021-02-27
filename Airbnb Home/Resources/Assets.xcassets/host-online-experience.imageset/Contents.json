@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "host-online-experience.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

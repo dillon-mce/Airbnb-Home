@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "unique-stays.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "cabins-cottages.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
