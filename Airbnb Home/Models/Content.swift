@@ -24,6 +24,10 @@ struct Content: Hashable {
     }
 }
 
+enum Section: Int, Hashable, CaseIterable {
+    case nearby //, stays, experiences, hosting, info
+}
+
 // MARK: - Headers
 //
 //extension Section {
@@ -41,19 +45,19 @@ struct Content: Hashable {
 //}
 
 // MARK: - Stub Data
-//
-//extension Section {
-//    func stubData() -> [Content] {
-//        switch self {
-//        case .nearby:
-//            return [
-//                .init(title: "Estes Park", subtitle: "1.5 hour drive", image: "estes-park"),
-//                .init(title: "Breckenridge", subtitle: "2.5 hour drive", image: "breckenridge"),
-//                .init(title: "Grand Lake", subtitle: "3 hour drive", image: "grand-lake"),
-//                .init(title: "Idaho Springs", subtitle: "2 hour drive", image: "idaho-springs"),
-//                .init(title: "Glenwood Springs", subtitle: "4.5 hour drive", image: "glenwood-springs"),
-//                .init(title: "Pagosa Springs", subtitle: "7.5 hour drive", image: "pagosa-springs"),
-//            ]
+
+extension Section {
+    func stubData() -> [Content] {
+        switch self {
+        case .nearby:
+            return [
+                .init(title: "Estes Park", subtitle: "1.5 hour drive", image: "estes-park"),
+                .init(title: "Breckenridge", subtitle: "2.5 hour drive", image: "breckenridge"),
+                .init(title: "Grand Lake", subtitle: "3 hour drive", image: "grand-lake"),
+                .init(title: "Idaho Springs", subtitle: "2 hour drive", image: "idaho-springs"),
+                .init(title: "Glenwood Springs", subtitle: "4.5 hour drive", image: "glenwood-springs"),
+                .init(title: "Pagosa Springs", subtitle: "7.5 hour drive", image: "pagosa-springs"),
+            ]
 //        case .stays:
 //            return [
 //                .init(title: "Entire homes", subtitle: nil, image: "entire-homes"),
@@ -101,6 +105,6 @@ struct Content: Hashable {
 //                .init(title: "World Health Organization", subtitle: "Education and updates", image: nil),
 //                .init(title: "Project Lighthouse", subtitle: "Finding and fighting discrimination", image: nil),
 //            ]
-//        }
-//    }
-//}
+        }
+    }
+}

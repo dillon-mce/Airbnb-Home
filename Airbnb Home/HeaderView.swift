@@ -12,4 +12,8 @@ class HeaderView: ProgrammaticView {
     override func configure() {
         backgroundColor = .systemTeal
     }
+
+    override func constrain() {
+        heightAnchor == 100
+    }
 }

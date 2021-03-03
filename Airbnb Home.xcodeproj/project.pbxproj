@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		342D83DA25ED403400D7103F /* SmallSquareCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342D83D925ED403400D7103F /* SmallSquareCell.swift */; };
+		342D83DD25ED46D200D7103F /* NSCollectioViewLayout+Layouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342D83DC25ED46D200D7103F /* NSCollectioViewLayout+Layouts.swift */; };
 		3445720925EAE68D000DD22D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445720825EAE68D000DD22D /* AppDelegate.swift */; };
 		3445720B25EAE68D000DD22D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445720A25EAE68D000DD22D /* SceneDelegate.swift */; };
 		3445720D25EAE68D000DD22D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3445720C25EAE68D000DD22D /* HomeViewController.swift */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		342D83D925ED403400D7103F /* SmallSquareCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallSquareCell.swift; sourceTree = "<group>"; };
+		342D83DC25ED46D200D7103F /* NSCollectioViewLayout+Layouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSCollectioViewLayout+Layouts.swift"; sourceTree = "<group>"; };
 		3445720525EAE68D000DD22D /* Airbnb Home.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Airbnb Home.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3445720825EAE68D000DD22D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3445720A25EAE68D000DD22D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +59,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		342D83D825ED402200D7103F /* Collection View Elements */ = {
+			isa = PBXGroup;
+			children = (
+				342D83D925ED403400D7103F /* SmallSquareCell.swift */,
+				342D83DC25ED46D200D7103F /* NSCollectioViewLayout+Layouts.swift */,
+			);
+			path = "Collection View Elements";
+			sourceTree = "<group>";
+		};
 		344571FC25EAE68D000DD22D = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +87,7 @@
 		3445720725EAE68D000DD22D /* Airbnb Home */ = {
 			isa = PBXGroup;
 			children = (
+				342D83D825ED402200D7103F /* Collection View Elements */,
 				3445724125EAF569000DD22D /* Models */,
 				3445722C25EAF05D000DD22D /* Extensions */,
 				3445722225EAED44000DD22D /* Resources */,
@@ -195,6 +209,7 @@
 			files = (
 				3445723A25EAF1DA000DD22D /* HomeView.swift in Sources */,
 				3445722E25EAF074000DD22D /* UIView+Helpers.swift in Sources */,
+				342D83DA25ED403400D7103F /* SmallSquareCell.swift in Sources */,
 				3445723725EAF119000DD22D /* UIFont+Custom.swift in Sources */,
 				3445724325EAF576000DD22D /* Content.swift in Sources */,
 				3445720D25EAE68D000DD22D /* HomeViewController.swift in Sources */,
@@ -202,6 +217,7 @@
 				3445723F25EAF481000DD22D /* HeaderView.swift in Sources */,
 				3445723425EAF103000DD22D /* UIImage+Helpers.swift in Sources */,
 				3445723125EAF0DF000DD22D /* UIStackView+Helpers.swift in Sources */,
+				342D83DD25ED46D200D7103F /* NSCollectioViewLayout+Layouts.swift in Sources */,
 				3445722A25EAEE2D000DD22D /* ProgrammaticView.swift in Sources */,
 				3445720B25EAE68D000DD22D /* SceneDelegate.swift in Sources */,
 			);
