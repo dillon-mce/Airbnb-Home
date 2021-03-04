@@ -44,6 +44,8 @@ private extension HomeView {
             switch section {
             case .nearby:
                 return .sideScrollingTwoItem()
+            default:
+                return .sideScrollingOneItem()
             }
         }
         return UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -63,7 +65,18 @@ private extension HomeView {
                 return view.dequeueConfiguredReusableCell(using: registration,
                                                           for: indexPath,
                                                           item: item)
+            default:
+                let registration = LargeSquareCell.registration()
+                return view.dequeueConfiguredReusableCell(using: registration,
+                                                          for: indexPath,
+                                                          item: item)
             }
+        }
+        let headers = Section.allCases.map { $0.headerContent }
+        let headerRegistration = SectionHeader.registration(headers: headers)
+        dataSource.supplementaryViewProvider = { collectionView, string, indexPath in
+            collectionView.dequeueConfiguredReusableSupplementary(using: headerRegistration,
+                                                                  for: indexPath)
         }
         return dataSource
     }
