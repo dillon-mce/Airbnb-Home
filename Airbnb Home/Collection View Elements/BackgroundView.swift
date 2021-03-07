@@ -8,13 +8,14 @@
 import UIKit
 
 enum BackgroundStyle: String, CaseIterable {
-    case inverted
+    case inverted, secondary
 
     var elementKind: String { "background.\(rawValue)" }
 
     var viewClass: AnyClass {
         switch self {
         case .inverted: return InvertedBackgroundView.self
+        case .secondary: return SecondaryBackgroundView.self
         }
     }
 }
@@ -39,6 +40,12 @@ class BackgroundView: UICollectionReusableView {
 final class InvertedBackgroundView: BackgroundView {
     override func provideBackgroundColor() -> UIColor? {
         .invertedBackground
+    }
+}
+
+final class SecondaryBackgroundView: BackgroundView {
+    override func provideBackgroundColor() -> UIColor? {
+        .secondarySystemBackground
     }
 }
 

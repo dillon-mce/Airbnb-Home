@@ -46,6 +46,8 @@ private extension HomeView {
                 return .sideScrollingTwoItem()
             case .experiences:
                 return .invertedSideScrollingOneItem()
+            case .info:
+                return .footer()
             default:
                 return .sideScrollingOneItem()
             }
@@ -70,6 +72,13 @@ private extension HomeView {
                                                           item: item)
             case .experiences:
                 let registration = InvertedLargeSquareCell.registration()
+                return view.dequeueConfiguredReusableCell(using: registration,
+                                                          for: indexPath,
+                                                          item: item)
+            case .info:
+                let registration = FooterCell.registration() { indexPath in
+                    indexPath.item % 4 != 3
+                }
                 return view.dequeueConfiguredReusableCell(using: registration,
                                                           for: indexPath,
                                                           item: item)

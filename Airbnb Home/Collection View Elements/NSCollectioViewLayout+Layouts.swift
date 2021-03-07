@@ -61,3 +61,32 @@ extension NSCollectionLayoutSection {
         return section
     }
 }
+
+// MARK: - Footer
+
+extension NSCollectionLayoutSection {
+    static func footer() -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
+                                              heightDimension: .estimated(60))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.7),
+                                               heightDimension: .estimated(200))
+        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize,
+                                                     subitems: [item, item, item, item])
+
+        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
+                                                heightDimension: .estimated(100))
+        let header = NSCollectionLayoutBoundarySupplementaryItem.header(layoutSize: headerSize)
+
+        let section = NSCollectionLayoutSection(group: group)
+        section.orthogonalScrollingBehavior = .groupPaging
+        section.boundarySupplementaryItems = [header]
+        section.interGroupSpacing = 12
+        section.contentInsets = .init(top: 0, leading: 20, bottom: 20, trailing: 20)
+
+        section.addBackground(style: .secondary)
+
+        return section
+    }
+}

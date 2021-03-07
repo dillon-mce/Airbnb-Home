@@ -25,7 +25,7 @@ struct Content: Hashable {
 }
 
 enum Section: Int, Hashable, CaseIterable {
-    case nearby, stays, experiences, hosting//, info
+    case nearby, stays, experiences, hosting, info
 }
 
 // MARK: - Headers
@@ -39,7 +39,7 @@ extension Section {
                                         subtitle: "Unique activities with local experts—in person or online.",
                                         image: nil)
         case .hosting: return .init(title: "Join millions of hosts on Airbnb", subtitle: nil, image: nil)
-    //        case .info: return .init(title: "Stay informed", subtitle: nil, image: nil)
+        case .info: return .init(title: "Stay informed", subtitle: nil, image: nil)
         }
     }
 }
@@ -89,28 +89,52 @@ extension Section {
                       subtitle: nil,
                       image: "host-experience"),
             ]
-//        case .info:
-//            return [
-//                .init(title: "For guests", subtitle: nil, image: nil, style: .title),
-//                .init(title: "Our COVID-19 response", subtitle: "Health and saftey updates", image: nil),
-//                .init(title: "Cancellation options", subtitle: "Learn what's covered", image: nil),
-//                .init(title: "Help Center", subtitle: "Get support", image: nil),
-//
-//                .init(title: "For hosts", subtitle: nil, image: nil, style: .title),
-//                .init(title: "Message from Brian Chesky", subtitle: "Hear from our CEO", image: nil),
-//                .init(title: "Resources for hosting", subtitle: "What's impacted by COVID-19", image: nil),
-//                .init(title: "Providing frontline stays", subtitle: "Learn how to help", image: nil),
-//
-//                .init(title: "For COVID-19 responders", subtitle: nil, image: nil, style: .title),
-//                .init(title: "Frontline stays", subtitle: "Learn about our program", image: nil),
-//                .init(title: "Sign up", subtitle: "Check for housing options", image: nil),
-//                .init(title: "Make a donation", subtitle: "Support nonprofit organizations", image: nil),
-//
-//                .init(title: "More", subtitle: nil, image: nil, style: .title),
-//                .init(title: "Airbnb Newsroom", subtitle: "Latest announcements", image: nil),
-//                .init(title: "World Health Organization", subtitle: "Education and updates", image: nil),
-//                .init(title: "Project Lighthouse", subtitle: "Finding and fighting discrimination", image: nil),
-//            ]
+        case .info:
+            return [
+                .init(title: "For guests", subtitle: nil, image: nil, style: .title),
+                .init(title: "Our COVID-19 response",
+                      subtitle: "Health and saftey updates",
+                      image: nil),
+                .init(title: "Cancellation options",
+                      subtitle: "Learn what's covered",
+                      image: nil),
+                .init(title: "Help Center",
+                      subtitle: "Get support",
+                      image: nil),
+
+                .init(title: "For hosts", subtitle: nil, image: nil, style: .title),
+                .init(title: "Message from Brian Chesky",
+                      subtitle: "Hear from our CEO",
+                      image: nil),
+                .init(title: "Resources for hosting",
+                      subtitle: "What's impacted by COVID-19",
+                      image: nil),
+                .init(title: "Providing frontline stays",
+                      subtitle: "Learn how to help",
+                      image: nil),
+
+                .init(title: "For COVID-19 responders", subtitle: nil, image: nil, style: .title),
+                .init(title: "Frontline stays",
+                      subtitle: "Learn about our program",
+                      image: nil),
+                .init(title: "Sign up",
+                      subtitle: "Check for housing options",
+                      image: nil),
+                .init(title: "Make a donation",
+                      subtitle: "Support nonprofit organizations",
+                      image: nil),
+
+                .init(title: "More", subtitle: nil, image: nil, style: .title),
+                .init(title: "Airbnb Newsroom",
+                      subtitle: "Latest announcements",
+                      image: nil),
+                .init(title: "World Health Organization",
+                      subtitle: "Education and updates",
+                      image: nil),
+                .init(title: "Project Lighthouse",
+                      subtitle: "Finding and fighting discrimination",
+                      image: nil),
+            ]
         }
     }
 }

@@ -10,6 +10,7 @@
 		34269D5F25F458D200C6FAC8 /* UIColor+Inverted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34269D5E25F458D200C6FAC8 /* UIColor+Inverted.swift */; };
 		34269D6225F4593A00C6FAC8 /* UITraitCollection+Inverted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34269D6125F4593A00C6FAC8 /* UITraitCollection+Inverted.swift */; };
 		34269D6625F45FC200C6FAC8 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34269D6525F45FC200C6FAC8 /* BackgroundView.swift */; };
+		34269D6B25F5884700C6FAC8 /* FooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34269D6A25F5884700C6FAC8 /* FooterCell.swift */; };
 		342D83DA25ED403400D7103F /* SmallSquareCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342D83D925ED403400D7103F /* SmallSquareCell.swift */; };
 		342D83DD25ED46D200D7103F /* NSCollectioViewLayout+Layouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342D83DC25ED46D200D7103F /* NSCollectioViewLayout+Layouts.swift */; };
 		342D83E425EF245400D7103F /* ContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342D83E325EF245400D7103F /* ContentCell.swift */; };
@@ -36,6 +37,7 @@
 		34269D5E25F458D200C6FAC8 /* UIColor+Inverted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Inverted.swift"; sourceTree = "<group>"; };
 		34269D6125F4593A00C6FAC8 /* UITraitCollection+Inverted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITraitCollection+Inverted.swift"; sourceTree = "<group>"; };
 		34269D6525F45FC200C6FAC8 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		34269D6A25F5884700C6FAC8 /* FooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterCell.swift; sourceTree = "<group>"; };
 		342D83D925ED403400D7103F /* SmallSquareCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallSquareCell.swift; sourceTree = "<group>"; };
 		342D83DC25ED46D200D7103F /* NSCollectioViewLayout+Layouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSCollectioViewLayout+Layouts.swift"; sourceTree = "<group>"; };
 		342D83E325EF245400D7103F /* ContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCell.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				342D83E625EF275200D7103F /* LargeSquareCell.swift */,
 				342D83E925EFE5AC00D7103F /* SectionHeader.swift */,
 				34269D6525F45FC200C6FAC8 /* BackgroundView.swift */,
+				34269D6A25F5884700C6FAC8 /* FooterCell.swift */,
 			);
 			path = "Collection View Elements";
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				3445724325EAF576000DD22D /* Content.swift in Sources */,
 				3445720D25EAE68D000DD22D /* HomeViewController.swift in Sources */,
 				3445720925EAE68D000DD22D /* AppDelegate.swift in Sources */,
+				34269D6B25F5884700C6FAC8 /* FooterCell.swift in Sources */,
 				3445723F25EAF481000DD22D /* HeaderView.swift in Sources */,
 				3445723425EAF103000DD22D /* UIImage+Helpers.swift in Sources */,
 				3445723125EAF0DF000DD22D /* UIStackView+Helpers.swift in Sources */,
