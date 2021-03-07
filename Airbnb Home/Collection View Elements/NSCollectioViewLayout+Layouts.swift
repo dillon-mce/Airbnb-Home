@@ -54,4 +54,10 @@ extension NSCollectionLayoutSection {
         section.contentInsets = .init(top: 20, leading: 20, bottom: 20, trailing: 20)
         return section
     }
+
+    static func invertedSideScrollingOneItem() -> NSCollectionLayoutSection {
+        let section = sideScrollingOneItem()
+        section.addBackground(style: .inverted)
+        return section
+    }
 }

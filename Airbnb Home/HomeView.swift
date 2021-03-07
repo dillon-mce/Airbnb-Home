@@ -44,10 +44,13 @@ private extension HomeView {
             switch section {
             case .nearby:
                 return .sideScrollingTwoItem()
+            case .experiences:
+                return .invertedSideScrollingOneItem()
             default:
                 return .sideScrollingOneItem()
             }
         }
+        layout.registerBackgrounds()
         return UICollectionView(frame: .zero, collectionViewLayout: layout)
     }
 }
@@ -65,6 +68,11 @@ private extension HomeView {
                 return view.dequeueConfiguredReusableCell(using: registration,
                                                           for: indexPath,
                                                           item: item)
+            case .experiences:
+                let registration = InvertedLargeSquareCell.registration()
+                return view.dequeueConfiguredReusableCell(using: registration,
+                                                          for: indexPath,
+                                                          item: item)
             default:
                 let registration = LargeSquareCell.registration()
                 return view.dequeueConfiguredReusableCell(using: registration,
@@ -74,9 +82,19 @@ private extension HomeView {
         }
         let headers = Section.allCases.map { $0.headerContent }
         let headerRegistration = SectionHeader.registration(headers: headers)
+        let invertedHeaderRegistration = InvertedHeader.registration(headers: headers)
         dataSource.supplementaryViewProvider = { collectionView, string, indexPath in
-            collectionView.dequeueConfiguredReusableSupplementary(using: headerRegistration,
-                                                                  for: indexPath)
+            let section = Section.allCases[indexPath.section]
+            switch section {
+            case .experiences:
+                return collectionView
+                    .dequeueConfiguredReusableSupplementary(using: invertedHeaderRegistration,
+                                                            for: indexPath)
+            default:
+                return collectionView
+                    .dequeueConfiguredReusableSupplementary(using: headerRegistration,
+                                                            for: indexPath)
+            }
         }
         return dataSource
     }
