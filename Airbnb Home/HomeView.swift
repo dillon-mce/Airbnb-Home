@@ -8,15 +8,26 @@
 import Anchorage
 import UIKit
 
+protocol HomeViewDelegate: AnyObject {
+    func updateStatusBarStyle(to style: UIStatusBarStyle)
+}
+
 class HomeView: ProgrammaticView {
+
+    weak var delegate: HomeViewDelegate?
 
     private let headerView = HeaderView()
     private lazy var collectionView = makeCollectionView()
     private lazy var dataSouce = makeDataSource()
 
+    private var oldYOffset: CGFloat = 0
+
     override func configure() {
+        headerView.delegate = self
+
         collectionView.backgroundColor = .systemBackground
         collectionView.dataSource = dataSouce
+        collectionView.delegate = self
     }
 
     override func constrain() {
@@ -106,5 +117,26 @@ private extension HomeView {
             }
         }
         return dataSource
+    }
+}
+
+// MARK: - UI Collection View Delegate
+
+extension HomeView: UICollectionViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let yOffset = scrollView.contentOffset.y
+
+        let updatedY = headerView.updateHeader(newY: yOffset, oldY: oldYOffset)
+        scrollView.contentOffset.y = updatedY
+
+        oldYOffset = scrollView.contentOffset.y
+    }
+}
+
+// MARK: - Header View Delegate
+
+extension HomeView: HeaderViewDelegate {
+    func updateStatusBarStyle(to style: UIStatusBarStyle) {
+        delegate?.updateStatusBarStyle(to: style)
     }
 }
